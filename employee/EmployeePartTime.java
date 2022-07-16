@@ -24,6 +24,21 @@ public class EmployeePartTime extends  Employee{
     }
 
     public int getSalary(){
-        return  (int) (getWorkingHours() * 10000);
+        return  (int) (getWorkingHours() * 100000);
+    }
+
+    @Override
+    public Employee addEmployee() {
+        Employee newEmployee;
+        newEmployee = new EmployeePartTime();
+        return newEmployee;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "EmployeePartTime{" + " Salary "+getSalary() +
+                '}';
     }
 }

@@ -1,11 +1,16 @@
 package employee;
 
-public abstract class Employee {
+public abstract class Employee implements Comparable<Employee> {
     private int id;
     private String name;
     private int age;
     private String phoneNumber;
     private String gmail;
+
+    @Override
+    public int compareTo(Employee o) {
+        return o.getSalary() - o.getSalary();
+    }
 
     public Employee(){};
 
@@ -58,4 +63,6 @@ public abstract class Employee {
     }
 
     public abstract int getSalary();
+
+    public abstract Employee addEmployee();
 }

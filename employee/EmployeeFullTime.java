@@ -5,12 +5,20 @@ public class EmployeeFullTime extends Employee{
     private int fine;
     private int hardSalary;
 
+
     public EmployeeFullTime(){}
 
     @Override
     public int getSalary() {
         return getHardSalary() + getBonus() -getFine();
 
+    }
+
+    @Override
+    public Employee addEmployee() {
+        Employee newEmployee;
+        newEmployee = new EmployeeFullTime();
+        return newEmployee;
     }
 
 
@@ -50,4 +58,12 @@ public class EmployeeFullTime extends Employee{
     public void setHardSalary(int hardSalary) {
         this.hardSalary = hardSalary;
     }
+
+    @Override
+    public String toString() {
+        return "EmployeeFullTime{" + getSalary() +
+                 '}';
+    }
+
+
 }
